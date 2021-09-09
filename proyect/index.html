@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <title>Hello, world!</title>
+</head>
+
+<body>
+  <div class="container contenedor">
+    <h1>Bienvenido a la Super-Calculadora para la Gente Super<span>&#160;</span></h1>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <!--dispaly donde el usuario vera las operaciones-->
+      <div class="col-12">
+        <textarea id="texto" class='autoExpand' rows='3' data-min-rows='3' placeholder='|' autofocus></textarea>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+
+        <div id="conte">
+          <div id="grid-numeros" class="numeral">
+            
+            <div id="boton">
+              <div id="num7" class="bot">7</div>
+              <div id="num8" class="bot">8</div>
+              <div id="num9" class="bot">9</div>
+              <div id="div" class="bot">/</div>
+              <div id="num4" class="bot">4</div>
+              <div id="num5" class="bot">5</div>
+              <div id="num6" class="bot">6</div>
+              <div id="mul" class="bot">*</div>
+              <div id="num1" class="bot">1</div>
+              <div id="num2" class="bot">2</div>
+              <div id="num3" class="bot">3</div>
+              <div id="res" class="bot">-</div>
+              <div id="num0" class="bot">0</div>
+              <div id="eli" class="bot">C</div>
+              <div id="eli1" class="bot">CE</div>
+              <div id="sum" class="bot">+</div>
+              <div id="igu" class="bot">=</div>
+              <div id="pun" class="bot">.</div>
+              <div id="pare" class="bot">(</div>
+              <div id="par" class="bot">)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Optional JavaScript; choose one of the two! -->
+  <script src="js/calculadora.js" type="text/javascript"></script>
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
