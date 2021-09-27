@@ -1,0 +1,92 @@
+
+.contenedor {
+	margin: auto;
+	display: table;
+}
+
+h1 { 
+	position: relative; 
+	float: left;
+	background: rgb(0, 0, 0);
+	color: #fff;
+	font-size: 2.5em;
+}
+
+h1 span {
+    position:absolute;
+    right:0;
+    width:0;
+    background: rgb(0, 0, 0);
+    border-left: 1px solid rgb(255, 252, 252);
+    animation: escribir 5s steps(30)  alternate;
+    
+}
+
+@keyframes escribir {
+    from { width: 100% }
+    to { width:0 }
+}
+
+/********************Textarea**************/
+
+textarea{  
+    display: block;
+    box-sizing: padding-box;
+    overflow: hidden;
+    
+    padding: 10px;
+    width: 250px;
+    font-size: 20px;
+    margin: 50px auto;
+    border-radius: 6px;
+    box-shadow: 2px 2px 8px rgba(black, .3);
+    border: 0;
+    color: rgb(255, 255, 255);
+    background: black;
+
+    &:focus{
+      border: none;
+      outline: none;
+    }
+}
+/*
+#texto{
+    background-color:#7dcea0 ;
+    height:20%;
+    font-family:verdana;
+    color:black;
+    font-size:20px;
+  }
+
+/****************botones*********************/
+#grid-numeros{
+    background-color: #000000;
+    height:18em;
+    width:20%;
+  }
+
+#boton{
+    display:flex;
+    flex-wrap:wrap;
+    height:80.30%;
+   
+  }
+  .bot{
+    width:25%;
+    font-family:x-large;
+    color:rgb(251, 251, 251);
+    font-size:20px;
+    }
+.numeral{
+    display: block;
+    box-sizing: padding-box;
+    overflow: hidden;
+  
+    padding: 10px;
+    width: 250px;
+    font-size: 14px;
+    margin: 50px auto;
+    border-radius: 6px;
+    box-shadow: 2px 2px 8px rgba(rgb(255, 255, 255), .3);
+    border: 0;
+}

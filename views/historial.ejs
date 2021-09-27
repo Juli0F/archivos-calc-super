@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  
+  <%- include('./partials/head.ejs'); %>
+  <link rel="stylesheet" href="/css/historial.css">
+</head>
+
+<body class="container">
+
+  <%- include('./partials/navbar.ejs'); %>
+  
+  
+  <div class="mdl-grid">
+    <div class="mdl-cell--12 col" >
+      <div id="img-report-summary">
+      <h1>Summary</h1><br>
+    <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+    <thead>
+      <tr>
+        <th class="mdl-data-table__cell--non-numeric">No</th>
+        <th class="mdl-data-table__cell--non-numeric">Fecha</th>
+        <th class="mdl-data-table__cell--non-numeric">Primer Numero</th>
+        <th class="mdl-data-table__cell--non-numeric"><div id="1">Operacion</div>
+          <div class="mdl-tooltip" data-mdl-for="1">contains class="img-responsive"</div>
+         </th>
+        <th class="mdl-data-table__cell--non-numeric">Segundo Numero</th>
+        <th class="mdl-data-table__cell--non-numeric">Resultado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="mdl-data-table__cell--non-numeric">1</td>
+        <td class="mdl-data-table__cell--non-numeric">2021/09/24</td>
+        <td class="mdl-data-table__cell--non-numeric">6</td>
+        <td class="mdl-data-table__cell--non-numeric">+</td>
+        <td class="mdl-data-table__cell--non-numeric">6</td>
+        <td class="mdl-data-table__cell--non-numeric">12</td>
+      </tr>
+      
+    </tbody>
+  </table>
+  </div>
+  </div>
+  </div>
+  
+  
+  
+  
+  <%- include('./partials/footer.ejs'); %>
+</body>
+
+</html>
