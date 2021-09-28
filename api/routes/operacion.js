@@ -21,13 +21,13 @@ router.post('/',(req,res) => {
             result = primer_numer + segundo_numero;
         break;
         case 2:
-            result = primer_numer + segundo_numero;
+            result = primer_numer - segundo_numero;
         break;
         case 3:
-            result = primer_numer + segundo_numero;
+            result = primer_numer * segundo_numero;
         break;
         case 4:
-            result = primer_numer + segundo_numero;
+            result = primer_numer / segundo_numero;
         break;
         default:
         
