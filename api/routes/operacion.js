@@ -17,10 +17,10 @@ router.post('/',(req,res) => {
    console.log("1 Parametro QUery "+ req.query.primer_numero);
    console.log("2 Parametro QUery "+ req.query.segundo_numero);
    console.log("3 (operador)Parametro QUery "+ req.query.operador);
-   
-   
-   const primer_numero = req.query.primer_numero;
-   const segundo_numero = req.query.segundo_numero;
+
+
+   const primer_numero = Number(req.query.primer_numero);
+   const segundo_numero = Number(req.query.segundo_numero);
    const operador = req.query.operador;
     
     var result = "";    
