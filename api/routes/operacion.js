@@ -11,23 +11,35 @@ router.get('/',(req,res)=> {
 });
 
 router.post('/',(req,res) => {
-    console.log("metodo post");
-    const{ primer_numero, segundo_numero, operador} = req.body;
-    console.log('Got body:', req.body);
+    
+    
+   // const{ primer_numero, segundo_numero, operador} = req.body;
+    console.log("1 Parametro QUery "+ req.query.primer_numero);
+    console.log("2 Parametro QUery "+ req.query.segundo_numero);
+    console.log("3 (operador)Parametro QUery "+ req.query.operador);
+    
+    
+    const primer_numero = req.query.primer_numero;
+    const segundo_numero = req.query.segundo_numero;
+    const operador = req.query.operador;
     
     var result = "";    
     switch(operador) {
         case 1:
-            result = primer_numer + segundo_numero;
+        case "1":
+            result = primer_numero + segundo_numero;
         break;
         case 2:
-            result = primer_numer - segundo_numero;
+        case "2":
+            result = primer_numero - segundo_numero;
         break;
         case 3:
-            result = primer_numer * segundo_numero;
+            case "3":
+            result = primer_numero * segundo_numero;
         break;
         case 4:
-            result = primer_numer / segundo_numero;
+        case "4":
+            result = primer_numero /  segundo_numero;
         break;
         default:
         
@@ -38,7 +50,7 @@ router.post('/',(req,res) => {
         
         operator  : operador,
         primero   : primer_numero,
-        segindo   : segundo_numero,
+        segundo   : segundo_numero,
         respuesta : result
         
       };
