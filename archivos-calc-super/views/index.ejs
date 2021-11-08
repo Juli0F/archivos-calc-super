@@ -19,7 +19,7 @@
   <div class="container">
     <div class="row">
       <div class="col-6"><br>
-        <form method="post" action="/operacion">
+        
           <div class="mb-3">
             <label for="first_number" class="form-label">Primer Numero</label>
             <input type="number" class="form-control" id="first_number" aria-describedby="numberHelp">
@@ -35,22 +35,22 @@
             <div class="row g-2">
               <div class="col-md">
                 <div class="form-floating">
-                  <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+                  <select class="form-select" id="operator" aria-label="Floating label select example">
                     
-                    <option value="1"  selected>Suma</option>
-                    <option value="2">Resta</option>
-                    <option value="3">Multipliacion</option>
-                    <option value="3">Division</option>
-                    <option value="3">Potencia</option>
+                    <option value="suma"  selected>Suma</option>
+                    <option value="resta">Resta</option>
+                    <option value="multiplicacion">Multipliacion</option>
+                    <option value="division">Division</option>
+                    
                   </select>
-                  <label for="floatingSelectGrid">Seleccione la operacion a realizar</label>
+                  <label for="operator">Seleccione la operacion a realizar</label>
                 </div>
               </div>
             </div>
             
           </div>
-          <button type="submit" class="btn btn-primary">Enviar</button>
-        </form>
+          <button type="submit" onclick='sendData()' class="btn btn-primary" >Enviar</button>
+  
         <hr>
       </div>
       
@@ -60,11 +60,17 @@
       
       <div class="col-5 d-flex form-floating justify-content-between bg-light">
         
-          <textarea class="form-control" placeholder="Historial"  id="floatingTextarea2" style="height: 220px" ></textarea>
+          <textarea class="form-control" placeholder="Historial"  id="historial" style="height: 220px" ></textarea>
           
           <label for="floatingTextarea2"><b>Historial</b></label>
       </div> 
        
+      <div class="col-5 d-flex form-floating justify-content-between bg-light">
+        
+        <textarea class="form-control" placeholder="Resultado"  id="resultado" style="height: 220px" ></textarea>
+        
+        <label for="floatingTextarea2"><b>Resulado</b></label>
+    </div> 
     </div>
     
     </div>

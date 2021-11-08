@@ -1,47 +1,49 @@
-const express = require('express');
+const express = require( "express" );
+const bodyparser = require("body-parser");
 const app = express();
-const path = require('path');
-const axios = require('axios');
+const path = require("path");
+const port = 4000; // default port to listen
+
 
 app.use(express.static('public'));
-app.use('/css', express.static(__dirname + 'public/css'));
-app.use('/js', express.static(__dirname + 'public/js'));
-
-app.set('views', './views');
+app.use('/js',express.static(__dirname+'public/js'));
+app.use(bodyparser.json());
 app.set('view engine', 'ejs');
 
-app.get('/', (req, res) => {
-    res.status(201).render('index');
-});
 
+app.get( "/home", ( request, response ) => {
+    //response.status(201).render('index');    
+    response.status(201).render('index');
+} );
 
-app.get('/aboutme', (req, res) => {
+app.get( "/", ( request, response ) => {
+    //response.status(201).render('index');    
+    response.status(201).render('login');
+} );
+
+app.get( "/login", ( request, response ) => {
     
-    
-    //res.status(201).sendFile(path.join(__dirname,'../views/about.html'));
-    res.status(201).render('../views/about');
-    
-});
+    response.status(201).render('login');
+} );
 
-app.get('/historial', (req, res) => {
+app.get( "/historial", ( request, response ) => {
     
+    response.status(201).render('historial');
+} );
+app.get( "/aboutme", ( request, response ) => {
     
-    //res.status(201).sendFile(path.join(__dirname,'../views/historial.html'));
-    res.status(201).render("../views/historial.ejs");
+    response.status(201).render('about');
+} );
+app.get( "/registro", ( request, response ) => {
+    response.status(201).render('registro');
     
-});
-app.get('/app', (req, res) => {
+} );
 
-    res.status(201).render('index');
+app.get( "*", ( request, response ) => {
     
-});
+    response.status(201).render('404');
+} );
 
-
-app.use( (req, res,next) => {
-    res.status(404).render("../views/404.ejs");
-    
-});
-
-app.listen(4000, () => console.log('http://localhost:4000'));
-
-
+app.listen( port, () => {
+    console.log( `server started at http://localhost:${ port }` );
+} );

@@ -1,14 +1,25 @@
 version: '3'
 services: 
+  redis:
+    image: 'redis:latest'
+  worker:
+    build:
+      dockerfile: Dockerfile
+      context: ./worker
+    volumes: 
+      - ./worker/routes:/app/routes
+      - ./worker/package.json:/app/package.json
+    expose: 
+      - "4002"
+    environment:
+      - TOKEN_VALUE=julioTOken
   api:
     build:
       dockerfile: Dockerfile
       context: ./api
-    volumes: 
-      - ./api/api:/app/api
-      - ./api/package.json:/app/package.json
-    #ports: 
-    #  - "3001:3001"
+    environment:
+      - TOKEN_VALUE=julioTOken
+    
   site:
     stdin_open: true
     build: 
@@ -25,9 +36,12 @@ services:
     depends_on: 
       - site
       - api
+      - worker
     restart: always
     build: 
       dockerfile: Dockerfile
       context: ./NGINX
     ports: 
-      - "8080:80"
+      - "80:80"
+
+    
